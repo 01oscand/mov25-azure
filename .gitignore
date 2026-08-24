@@ -1,0 +1,5 @@
+*.pem
+*.key
+.vscode/
+.DS_Store
+Thumbs.db
