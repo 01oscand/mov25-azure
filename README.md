@@ -11,3 +11,14 @@ Under vecka 34 arbetar jag med Compute i Microsoft Azure.
 Målet med uppgiften är att provisionera en Ubuntu-baserad
 virtuell maskin, installera Nginx och driftsätta Novatrix
 kundtjänstsida.
+
+## Vecka 35 – IAM och identitet
+
+Den här veckan konfigureras identiteter och behörigheter för Novatrix AB i Microsoft Azure.
+
+Arbetet omfattar:
+- Användare i Microsoft Entra ID
+- Säkerhetsgrupper för drift och utveckling
+- RBAC enligt principen least privilege
+- Managed Identity för kundtjänstapplikationen
+- Verifiering av tilldelade behörigheter
