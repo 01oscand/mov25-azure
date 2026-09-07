@@ -22,3 +22,7 @@ Arbetet omfattar:
 - RBAC enligt principen least privilege
 - Managed Identity för kundtjänstapplikationen
 - Verifiering av tilldelade behörigheter
+
+## Vecka 36 – Nätverk och säkerhet
+
+Under V36 byggs ett säkert nätverkslager runt Novatrix miljö med VNet, subnät och NSG enligt defense in depth och least privilege.
