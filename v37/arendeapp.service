@@ -1,0 +1,13 @@
+[Unit]
+Description=Novatrix Arende Backend
+After=network-online.target
+
+[Service]
+Type=simple
+User=azureuser
+WorkingDirectory=/opt/arendeapp
+ExecStart=/opt/arendeapp/venv/bin/python /opt/arendeapp/app.py
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
