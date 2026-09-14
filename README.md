@@ -26,3 +26,7 @@ Arbetet omfattar:
 ## Vecka 36 – Nätverk och säkerhet
 
 Under V36 byggs ett säkert nätverkslager runt Novatrix miljö med VNet, subnät och NSG enligt defense in depth och least privilege.
+
+## Vecka 37 – Storage
+
+Under V37 implementeras säker Azure Blob Storage för Novatrix ärenden och bilagor. Webbapplikationen använder Managed Identity och RBAC för att skriva till lagringen utan lagrade lösenord eller access keys.
