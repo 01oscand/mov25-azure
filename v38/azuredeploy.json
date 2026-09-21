@@ -34,6 +34,11 @@
       "apiVersion": "2024-05-01",
       "name": "[parameters('nsgName')]",
       "location": "[parameters('location')]",
+      "tags": {
+    "Environment": "Lab",
+    "Project": "Novatrix",
+    "ManagedBy": "ARM"
+},
       "properties": {
         "securityRules": [
           {
