@@ -1,23 +1,44 @@
 # V38 – Infrastructure as Code
 
-Under vecka 38 används Infrastructure as Code med ARM-templates
-för att provisionera centrala delar av Novatrix Azure-miljö.
+Under vecka 38 används ARM-templates för att provisionera
+centrala delar av Novatrix Azure-miljö.
 
-## Resurser
+## Provisionerade resurser
 
-ARM-templaten provisionerar:
-
-- Virtual Network
-- Subnet
-- Network Security Group
+- Virtual Network: `vnet-novatrix-iac`
+- Subnet: `snet-web`
+- Network Security Group: `nsg-web-iac`
 - Webregel för TCP 80 och 443
 - Azure Storage Account
 
-Miljön är parametriserad för att templaten ska kunna återanvändas.
+## Filer
+
+- `azuredeploy.json` – ARM-template
+- `azuredeploy.parameters.json` – parametervärden
+
+## Validering
+
+```bash
+az deployment group validate \
+  --resource-group rg-novatrix \
+  --template-file azuredeploy.json \
+  --parameters @azuredeploy.parameters.json
+
+## What-If
+
+az deployment group what-if \
+  --resource-group rg-novatrix \
+  --template-file azuredeploy.json \
+  --parameters @azuredeploy.parameters.json
 
 ## Deployment
+az deployment group create \
+  --name novatrix-v38-deployment \
+  --resource-group rg-novatrix \
+  --template-file azuredeploy.json \
+  --parameters @azuredeploy.parameters.json
 
-Deployment sker med Azure CLI mot resursgruppen `rg-novatrix`.
-
-Före deployment används `validate` och `what-if` för att kontrollera
-templaten och vilka förändringar Azure planerar att genomföra.
+## Verifiering
+az resource list \
+  --resource-group rg-novatrix \
+  -o table
