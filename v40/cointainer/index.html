@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novatrix Kundtjänst</title>
+</head>
+
+<body>
+
+<h1>Novatrix Kundtjänst</h1>
+
+    <p>
+        Välkommen till Novatrix kundtjänst.
+        Fyll i formuläret nedan för att skapa ett ärende.
+    </p>
+
+    <form action="/submit" method="post" enctype="multipart/form-data">
+
+        <label for="name">Namn:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="mail">E-post:</label><br>
+        <input type="email" id="mail" name="mail" required><br><br>
+
+        <label for="msg">Meddelande:</label><br>
+        <textarea id="msg" name="msg" rows="6" cols="40" required></textarea>
+        <br><br>
+
+        <label for="bild">Bilaga:</label><br>
+        <input type="file" id="bild" name="bild"><br><br>
+
+        <button type="submit">Skicka ärende</button>
+
+    </form>
+
+</body>
+</html>
